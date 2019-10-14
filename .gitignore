@@ -50,6 +50,10 @@ cmake-build-*/
 out/
 target/
 
+# Allure
+.allure/
+allure-results/
+
 # mpeltonen/sbt-idea plugin
 .idea_modules/
 
