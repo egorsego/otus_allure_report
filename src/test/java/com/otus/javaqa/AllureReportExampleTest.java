@@ -9,6 +9,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -18,7 +19,9 @@ public class AllureReportExampleTest {
 
     @BeforeEach
     public void setup() {
-       step = new TestStep(WebDriverType.CHROME);
+       ChromeOptions options = new ChromeOptions();
+       options.addArguments("--no-sandbox");
+       step = new TestStep(WebDriverType.CHROME, options);
     }
 
     @AfterEach

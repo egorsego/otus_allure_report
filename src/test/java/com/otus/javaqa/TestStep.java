@@ -10,8 +10,8 @@ import java.util.List;
 public class TestStep {
     private WebDriver driver;
 
-    public TestStep(WebDriverType wdType) {
-        this.driver = WebDriverFactory.createDriver(wdType);
+    public TestStep(WebDriverType wdType, MutableCapabilities caps) {
+        this.driver = WebDriverFactory.createDriver(wdType, caps);
         driver.manage().window().maximize();
     }
 
