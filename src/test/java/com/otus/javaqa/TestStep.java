@@ -12,7 +12,7 @@ public class TestStep {
 
     public TestStep(WebDriverType wdType, MutableCapabilities caps) {
         this.driver = WebDriverFactory.createDriver(wdType, caps);
-        driver.manage().window().maximize();
+        driver.manage().window().setSize(new Dimension(1920, 1080));
     }
 
     @Step("Open Otus Homepage")
