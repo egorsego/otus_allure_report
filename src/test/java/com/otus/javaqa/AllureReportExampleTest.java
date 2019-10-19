@@ -21,6 +21,7 @@ public class AllureReportExampleTest {
     public void setup() {
        ChromeOptions options = new ChromeOptions();
        options.addArguments("--no-sandbox");
+       options.addArguments("--disable-dev-shm-usage");
        step = new TestStep(WebDriverType.CHROME, options);
     }
 
