@@ -41,8 +41,8 @@ public class AllureReportExampleTest {
     }
 
     @ParameterizedTest
-    @ValueSource(strings = {"Java QA Engineer", "Python QA Engineer", "Mobile QA Engineer", "JavaScript QA Engineer"})
-    @DisplayName("Java QA Course is Present on Operations Courses Page")
+    @ValueSource(strings = {"Java QA Engineer", "Python QA Engineer", "Mobile QA Engineer"})
+    @DisplayName("Course is Present on Operations Courses Page")
     @Description("Checks that given course is present on Operations Courses page")
     @Severity(SeverityLevel.CRITICAL)
     public void qaJavaCourseIsPresentTest(String course) {

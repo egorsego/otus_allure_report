@@ -34,7 +34,7 @@ public class TestStep {
     public boolean courseIsPresent(String courseName) {
         List<WebElement> courses = driver.findElements(By.xpath("//div[contains(@class, 'lesson-title')]"));
         for (WebElement we : courses) {
-            if (we.getAttribute("innerText").trim().equals(courseName)) {
+            if (we.getAttribute("innerText").trim().contains(courseName)) {
                 Actions action = new Actions(driver);
                 action.moveToElement(we).perform();
                 takeScreenshot();
